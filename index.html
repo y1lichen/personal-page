@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jefferson's Personal Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="desktop">
+        <!-- 桌面背景 -->
+        <div class="desktop-background"></div>
+        
+        <!-- 任务栏 -->
+        <div class="taskbar">
+            <div class="taskbar-left">
+                <button class="start-button">
+                    <span class="start-text">start</span>
+                </button>
+            </div>
+            <div class="taskbar-center">
+                <div class="taskbar-info">Windows 7</div>
+            </div>
+            <div class="taskbar-right">
+                <div class="system-clock" id="systemClock">12:00</div>
+            </div>
+        </div>
+
+        <!-- 桌面图标 -->
+        <div class="desktop-icons">
+            <!-- 关于我 文件 -->
+            <div class="desktop-icon file-icon" data-file="about">
+                <div class="icon-image about-me-icon"></div>
+                <div class="icon-label">關於我</div>
+            </div>
+
+            <!-- 工作经验 文件 -->
+            <div class="desktop-icon file-icon" data-file="experience">
+                <div class="icon-image experience-icon"></div>
+                <div class="icon-label">工作經驗</div>
+            </div>
+
+            <!-- 技能和专长 文件 -->
+            <div class="desktop-icon file-icon" data-file="skills">
+                <div class="icon-image skills-icon"></div>
+                <div class="icon-label">技能和專長</div>
+            </div>
+
+            <!-- 项目作品 文件 -->
+            <div class="desktop-icon file-icon" data-file="projects">
+                <div class="icon-image projects-icon"></div>
+                <div class="icon-label">項目作品</div>
+            </div>
+
+            <!-- 文章分享 文件夹 -->
+            <div class="desktop-icon folder-icon" data-folder="articles">
+                <div class="icon-image articles-icon"></div>
+                <div class="icon-label">文章分享</div>
+            </div>
+
+            <!-- 联系方式 文件 -->
+            <div class="desktop-icon file-icon" data-file="contact">
+                <div class="icon-image contact-icon"></div>
+                <div class="icon-label">聯繫方式</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文件夹窗口容器 -->
+    <div class="window-container"></div>
+
+    <!-- 右键菜单 -->
+    <div class="context-menu" id="contextMenu">
+        <div class="context-menu-item">刷新</div>
+        <div class="context-menu-item">顯示桌面</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

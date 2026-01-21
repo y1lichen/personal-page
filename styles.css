@@ -1,0 +1,469 @@
+/* ===== 全局样式 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+}
+
+body {
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* ===== 桌面 ===== */
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-background {
+    flex: 1;
+    background: linear-gradient(135deg, #003B66 0%, #0066CC 50%, #00CCFF 100%);
+    position: relative;
+}
+
+/* ===== 桌面图标 ===== */
+.desktop-icons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    z-index: 10;
+}
+
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    user-select: none;
+    width: 70px;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.desktop-icon.selected {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ===== 文件夹图标 ===== */
+.icon-image {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* ===== 文件夹图标 ===== */
+.folder-icon .icon-image {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5),
+                inset -1px -1px 0 rgba(0, 0, 0, 0.3),
+                2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.folder-icon .icon-image::before {
+    content: '';
+    width: 20px;
+    height: 14px;
+    background: linear-gradient(135deg, #FFE135 0%, #FFB90F 100%);
+    border-radius: 2px 2px 0 0;
+    position: absolute;
+    top: -8px;
+    left: 2px;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* ===== 文件图标 ===== */
+.file-icon .icon-image {
+    background: linear-gradient(135deg, #F5F5F5 0%, #E8E8E8 100%);
+    border: 2px solid #999;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.8),
+                inset -1px -1px 0 rgba(0, 0, 0, 0.2),
+                2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.file-icon .icon-image::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 12px;
+    background: #0066CC;
+}
+
+.file-icon .icon-image::after {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 4px;
+    right: 4px;
+    height: 2px;
+    background: #999;
+    box-shadow: 0 4px 0 #999, 0 8px 0 #999;
+}
+
+.about-me-icon::after,
+.experience-icon::after,
+.skills-icon::after,
+.projects-icon::after,
+.articles-icon::after,
+.contact-icon::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-icon::after {
+    content: '👤';
+    font-size: 28px;
+}
+
+.experience-icon::after {
+    content: '💼';
+    font-size: 28px;
+}
+
+.skills-icon::after {
+    content: '⭐';
+    font-size: 28px;
+}
+
+.projects-icon::after {
+    content: '🎨';
+    font-size: 28px;
+}
+
+.articles-icon::after {
+    content: '📝';
+    font-size: 28px;
+}
+
+.contact-icon::after {
+    content: '📧';
+    font-size: 28px;
+}
+
+.icon-label {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    word-wrap: break-word;
+    width: 70px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== 任务栏 ===== */
+.taskbar {
+    height: 40px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #EFEFEF 50%, #D0D0D0 100%);
+    border-top: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    gap: 5px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+                0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.taskbar-left {
+    flex: 0 0 auto;
+}
+
+.start-button {
+    background: linear-gradient(180deg, #00B050 0%, #007229 100%);
+    color: white;
+    border: 1px solid #003D00;
+    padding: 4px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.3),
+                inset -1px -1px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.1s;
+}
+
+.start-button:hover {
+    background: linear-gradient(180deg, #00C000 0%, #008A3A 100%);
+}
+
+.start-button:active {
+    box-shadow: inset -1px -1px 0 rgba(255, 255, 255, 0.3),
+                inset 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.start-text {
+    letter-spacing: 1px;
+}
+
+.taskbar-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.taskbar-info {
+    color: #666;
+    font-size: 12px;
+}
+
+.taskbar-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.system-clock {
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 50px;
+}
+
+/* ===== 窗口样式 ===== */
+.window {
+    position: fixed;
+    background: linear-gradient(180deg, #ECE9D8 0%, #ECE9D8 100%);
+    border: 1px solid;
+    border-color: #FFFFFF #DFDFDF #D0D0D0 #0A0E27;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.8);
+    min-width: 400px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.window.active {
+    z-index: 1000;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.8),
+                0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== 窗口标题栏 ===== */
+.window-title {
+    background: linear-gradient(90deg, #0066CC 0%, #0080FF 100%);
+    color: white;
+    padding: 2px 2px 2px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 26px;
+    cursor: move;
+    user-select: none;
+    border-bottom: 1px solid #003D7A;
+}
+
+.window-title-text {
+    flex: 1;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.window-button {
+    width: 22px;
+    height: 20px;
+    background: linear-gradient(180deg, #F0F0F0 0%, #DFDFDF 100%);
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.1s;
+}
+
+.window-button:hover {
+    background: linear-gradient(180deg, #F8F8F8 0%, #ECECEC 100%);
+}
+
+.window-button:active {
+    border-color: #808080 #FFFFFF #FFFFFF #808080;
+    background: linear-gradient(180deg, #DFDFDF 0%, #F0F0F0 100%);
+}
+
+.close-button:hover {
+    background: linear-gradient(180deg, #FF6B6B 0%, #FF4444 100%);
+    color: white;
+}
+
+/* ===== 窗口内容 ===== */
+.window-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #ECE9D8;
+    border-bottom: 1px solid #DFDFDF;
+    border-right: 1px solid #DFDFDF;
+}
+
+.window-content::-webkit-scrollbar {
+    width: 16px;
+}
+
+.window-content::-webkit-scrollbar-track {
+    background: #C0C0C0;
+    border-left: 1px solid #DFDFDF;
+}
+
+.window-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #F0F0F0 0%, #DFDFDF 100%);
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+}
+
+/* ===== 内容样式 ===== */
+.window-content h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000080;
+}
+
+.window-content h2 {
+    font-size: 14px;
+    margin: 15px 0 10px 0;
+    color: #000080;
+    font-weight: bold;
+}
+
+.window-content p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.window-content ul,
+.window-content ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.window-content li {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.file-item {
+    background: linear-gradient(135deg, #F5F5F5 0%, #EFEFEF 100%);
+    border: 1px solid #DFDFDF;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.file-item:hover {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+    border-color: #0066CC;
+    box-shadow: inset 0 0 0 1px #0066CC;
+}
+
+.file-item-title {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #000080;
+}
+
+.file-item-desc {
+    font-size: 11px;
+    color: #666;
+}
+
+/* ===== 右键菜单 ===== */
+.context-menu {
+    position: fixed;
+    background: linear-gradient(180deg, #F0F0F0 0%, #E8E8E8 100%);
+    border: 1px solid;
+    border-color: #FFFFFF #808080 #808080 #FFFFFF;
+    border-radius: 2px;
+    min-width: 150px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    display: none;
+}
+
+.context-menu.show {
+    display: block;
+}
+
+.context-menu-item {
+    padding: 4px 12px;
+    font-size: 12px;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    padding: 6px 12px;
+}
+
+.context-menu-item:hover {
+    background-color: #0066CC;
+    color: white;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 800px) {
+    .desktop-icons {
+        top: 10px;
+        left: 10px;
+        gap: 60px;
+    }
+
+    .desktop-icon {
+        width: 60px;
+    }
+
+    .icon-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .window {
+        min-width: 300px;
+        min-height: 250px;
+    }
+}
