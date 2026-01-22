@@ -143,25 +143,23 @@ const fileContents = {
         `
     },
     contact: {
-        title: '联系方式',
+        title: '聯繫方式',
         isFile: true,
         content: `
-            <h1>联系方式</h1>
+            <h1>聯繫方式'</h1>
             <h2>社交媒体</h2>
             <ul>
-                <li>📧 Email: your.email@example.com</li>
-                <li>💼 LinkedIn: linkedin.com/in/yourprofile</li>
-                <li>🐙 GitHub: github.com/yourprofile</li>
-                <li>🐦 Twitter: @yourhandle</li>
+                <li>💼 LinkedIn: www.linkedin.com/in/jefferson-chen-8943261b9</li>
+                <li>🐙 GitHub: github.com/y1lichen</li>
             </ul>
             <h2>其他</h2>
             <ul>
-                <li>📱 WeChat: your_wechat_id</li>
-                <li>📱 Phone: +86 1XX-XXXX-XXXX</li>
-                <li>📍 Location: China</li>
+                <li>📧 Email: r14725013@ntu.edu.tw</li>
+                <li>📧 Email: y1lichen@icloud.com</li>
+                <li>📍 Location: Taipei, Taiwan</li>
             </ul>
-            <h2>合作机会</h2>
-            <p>如果您对我的工作感兴趣，或者有任何合作机会，欢迎通过上述方式与我联系！</p>
+            <h2>合作機會</h2>
+            <p>歡迎透過上述方式與我聯繫！</p>
         `
     }
 };
