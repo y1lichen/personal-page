@@ -149,13 +149,13 @@ const fileContents = {
             <h1>聯繫方式'</h1>
             <h2>社交媒体</h2>
             <ul>
-                <li>💼 LinkedIn: www.linkedin.com/in/jefferson-chen-8943261b9</li>
-                <li>🐙 GitHub: github.com/y1lichen</li>
+                <li>💼 LinkedIn: <a href= "https://www.linkedin.com/in/jefferson-chen-8943261b9">www.linkedin.com/in/jefferson-chen-8943261b9</a></li>
+                <li>🐙 GitHub: <a href= "https://www.github.com/y1lichen">github.com/y1lichen</a></li>
             </ul>
             <h2>其他</h2>
             <ul>
-                <li>📧 Email: r14725013@ntu.edu.tw</li>
-                <li>📧 Email: y1lichen@icloud.com</li>
+                <li>📧 Email: <a href= "mailto:r14725013@ntu.edu.tw">r14725013@ntu.edu.tw</a></li>
+                <li>📧 Email: <a href= "mailto:y1lichen@icloud.com">y1lichen@icloud.com</a></li>
                 <li>📍 Location: Taipei, Taiwan</li>
             </ul>
             <h2>合作機會</h2>
@@ -364,7 +364,7 @@ function createWindow(id, folderName, title, content) {
             <div class="window-controls">
                 <button class="window-button minimize-btn" title="最小化">_</button>
                 <button class="window-button maximize-btn" title="最大化">□</button>
-                <button class="window-button close-button" title="关闭">✕</button>
+                <button class="window-button close-button" title="關閉">✕</button>
             </div>
         </div>
         <div class="window-content">
