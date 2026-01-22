@@ -47,17 +47,26 @@ const fileContents = {
             <h1>關於我</h1>
             <p>歡迎來到我的個人網頁！這是一個以 Windows 7 桌面風格設計的創意作品集。</p>
             <h2>個人介紹</h2>
-            <p>我是一名充滿熱情的開發者和設計師，致力於創造創新的數位體驗。</p>
+            <p>我是陳奕利。</p>
             <h2>興趣愛好</h2>
             <ul>
-                <li>Web 開發和設計</li>
-                <li>UI/UX 設計</li>
-                <li>創意編程項目</li>
-                <li>開源貢獻</li>
-                <li>技術寫作</li>
+                <li>桌面、手機應用程式開發</li>
+                <li>數據科學</li>
+                <li>開車。特別是長途駕駛</li>
             </ul>
-            <h2>座右銘</h2>
-            <p><em>"代碼是藝術，設計是靈魂。"</em></p>
+            <h2>工作經驗</h2>
+             <div class="file-item">
+                <div class="file-item-title">NCCUPass</div>
+                <div class="file-item-desc">2022 - now<br>Frontend Tech Lead</div>
+            </div>
+            <div class="file-item">
+                <div class="file-item-title">Yahoo! Mobile Developer</div>
+                <div class="file-item-desc">2024 summer<br>開發 Yahoo!奇摩 iOS App 及新產品/新功能 POC</div>
+            </div>
+            <div class="file-item">
+                <div class="file-item-title">TSMC DNA intership</div>
+                <div class="file-item-desc">2025 summer</div>
+            </div>
         `
     },
     experience: {
