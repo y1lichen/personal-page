@@ -66,24 +66,17 @@ const fileContents = {
         content: `
             <h1>工作經驗</h1>
             <div class="file-item">
-                <div class="file-item-title">Senior Web Developer - Tech Company</div>
-                <div class="file-item-desc">2022年 - 至今<br>負責前端架構和團隊管理</div>
+                <div class="file-item-title">NCCUPass</div>
+                <div class="file-item-desc">2022 - now<br>Frontend Tech Lead</div>
             </div>
             <div class="file-item">
                 <div class="file-item-title">Full Stack Developer - Startup</div>
-                <div class="file-item-desc">2020年 - 2022年<br>開發和維護企業級應用</div>
+                <div class="file-item-desc">2024 summer<br>開發和維護企業級應用</div>
             </div>
             <div class="file-item">
                 <div class="file-item-title">Junior Developer - Digital Agency</div>
-                <div class="file-item-desc">2018年 - 2020年<br>學習和成長階段</div>
+                <div class="file-item-desc">2025 summer<br>學習和成長階段</div>
             </div>
-            <h2>職位亮點</h2>
-            <ul>
-                <li>主導三個大型項目的開發</li>
-                <li>指導5名初級開發者</li>
-                <li>優化系統性能提升40%</li>
-                <li>獲得年度優秀員工獎</li>
-            </ul>
         `
     },
     skills: {
