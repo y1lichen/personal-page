@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>前端安全最佳實踐</title>
+    <style>
+        body { font-family: "Microsoft YaHei", "微軟雅黑", Arial, sans-serif; line-height: 1.6; }
+        h1 { color: #0066CC; }
+        h2 { color: #000080; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>前端安全最佳實踐</h1>
+    <p><strong>發佈日期：</strong>2024年10月</p>
+    
+    <h2>簡介</h2>
+    <p>前端安全往往被忽視，但卻至關重要。本文詳細介紹 XSS、CSRF 防護和數據加密的相關知識。</p>
+    
+    <h2>安全防護</h2>
+    <ul>
+        <li><strong>XSS 跨站腳本攻擊防護</strong> - 輸入驗證和輸出編碼</li>
+        <li><strong>CSRF 跨站請求偽造防護</strong> - Token 驗證機制</li>
+        <li><strong>內容安全策略 (CSP)</strong> - 通過 HTTP 頭部限制資源加載</li>
+        <li><strong>數據加密和存儲</strong> - 敏感信息的保護</li>
+        <li><strong>依賴安全審計</strong> - npm 包的風險評估</li>
+    </ul>
+    
+    <h2>XSS 防護示例</h2>
+    <pre><code>
+// 錯誤的做法
+function showUserContent(content) {
+    document.innerHTML = content; // 危險！
+}
+
+// 正確的做法
+function showUserContent(content) {
+    const div = document.createElement('div');
+    div.textContent = content; // 安全的文本插入
+    document.body.appendChild(div);
+}
+    </code></pre>
+    
+    <h2>結論</h2>
+    <p>安全是一個持續的過程。不斷學習、定期審計和及時更新依賴都是保持應用安全的重要措施。</p>
+</body>
+</html>

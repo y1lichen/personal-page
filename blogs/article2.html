@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>React 性能優化指南</title>
+    <style>
+        body { font-family: "Microsoft YaHei", "微軟雅黑", Arial, sans-serif; line-height: 1.6; }
+        h1 { color: #0066CC; }
+        h2 { color: #000080; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>React 性能優化指南</h1>
+    <p><strong>發佈日期：</strong>2024年11月</p>
+    
+    <h2>簡介</h2>
+    <p>React 應用的性能優化是開發中的重要課題。本文分享實戰技巧：Memo、useMemo、useCallback 等優化方案。</p>
+    
+    <h2>性能優化技巧</h2>
+    <ul>
+        <li><strong>React.memo 組件優化</strong> - 防止不必要的重新渲染</li>
+        <li><strong>useMemo 緩存計算</strong> - 避免昂貴的計算重複執行</li>
+        <li><strong>useCallback 緩存函數</strong> - 保持函數引用穩定</li>
+        <li><strong>代碼分割和懶加載</strong> - 減少初始包體積</li>
+        <li><strong>虛擬列表實現</strong> - 處理大量數據渲染</li>
+    </ul>
+    
+    <h2>代碼示例</h2>
+    <pre><code>
+// 使用 useMemo 和 useCallback 的示例
+const MyComponent = React.memo(({ items }) => {
+    const filteredItems = useMemo(() => {
+        return items.filter(item => item.active);
+    }, [items]);
+    
+    const handleClick = useCallback((id) => {
+        console.log(id);
+    }, []);
+    
+    return &lt;ItemList items={filteredItems} onClick={handleClick} /&gt;;
+});
+    </code></pre>
+    
+    <h2>最佳實踐</h2>
+    <p>性能優化不是一成不變的。應該根據實際情況使用適當的工具和技術。過度優化可能導致代碼複雜性增加。</p>
+</body>
+</html>
